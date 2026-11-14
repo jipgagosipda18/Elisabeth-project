@@ -1,0 +1,331 @@
+body{
+    background-color: #171411;
+    color: #f3ebdd;
+    font-family: serif;
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background-color: #171411;
+    border-bottom: 1px solid #a98745;
+}
+
+.logo{
+    color: #D7B66F;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span{
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+color: #F3EBDD;
+text-decoration: none;
+font-size: 13px;
+letter-spacing: 1px;
+}
+
+.navigation a:hover {
+color: #D7B66F;
+}
+
+.hero{
+    min-height: 650px;
+    padding: 100px 10%;
+
+background-color: #F3EBDD;
+color: #211B16;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+
+gap: 50px;
+}
+
+.hero-subtitle{
+    color: #a98745;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1{
+    font-family: "Cinzel", serif;
+    font-size: clamp(35px, 5vw, 68px);
+    line-height: 1.2;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span{
+    color: #a98745;
+}
+
+.hero-description{
+    color: #665A4B;
+    font-family: serif;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
+
+.hero-button{
+    display: inline-block;
+    padding: 15px 25px;
+
+    background-color: #211B16;
+    color: #D7B66F;
+
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover{
+    background-color: #a98745;
+    color: white;
+}
+
+.hero-image{
+    width: 100%;
+    max-width: 900px;
+}
+
+.hero-image img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-image p{
+    color: #a98745;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    .hero{
+        padding: 65px 7%;
+        min-height: auto;
+        gap: 35px;
+    }
+}
+
+/* FRANZ JOSEPH I */
+
+.emperor-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+
+    padding: 100px 10%;
+    background: #EAE0D0;
+    color: #211B16;
+}
+
+.emperor-image img {
+    width: 100%;
+    display: block;
+    border: 5px solid #A98745;
+}
+
+.emperor-content h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(30px, 4vw, 48px);
+}
+
+.section-label {
+    color: #A98745;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.life-date {
+    color: #A98745;
+    font-size: 17px;
+}
+
+.gold-line {
+    width: 70px;
+    height: 2px;
+    background: #A98745;
+    margin: 25px 0;
+}
+
+.emperor-content p {
+    line-height: 1.9;
+}
+
+.emperor-content a {
+    display: inline-block;
+    margin-top: 25px;
+    color: #A98745;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+
+/* ELISABETH */
+
+.elisabeth-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 650px;
+    padding: 120px 10%;
+
+    display: flex;
+    align-items: center;
+
+    background: #B58BD9;
+    color: #F3EAFB;
+}
+
+.elisabeth-portrait{
+    width: 260px;
+    max-width: 100%;
+
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+
+    border: 2px solid #B58BD9;
+    padding: 5px;
+
+    margin: 25px 0;
+
+    box-shadow: 0 10px 35px
+        rgba(0,0,0,0.35)
+}
+/* BLURRED POSTER BACKGROUND */
+
+.elisabeth-section::before {
+    content: "";
+
+    position: absolute;
+    z-index: -2;
+    inset: -20px;
+
+    background-image:
+        url("엘리자벳\ 뮤지컬.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(9px);
+    opacity: 0.55;
+}
+
+/* PURPLE OVERLAY */
+
+.elisabeth-section::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    background: rgba(40, 20, 65, 0.78);
+}
+
+.elisabeth-content {
+    max-width: 650px;
+}
+
+.elisabeth-label {
+    color: #C7A5E8;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.elisabeth-content h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(45px, 7vw, 76px);
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+.elisabeth-date {
+    color: #C7A5E8;
+    letter-spacing: 3px;
+}
+
+.purple-line {
+    width: 80px;
+    height: 2px;
+    background: #B58BD9;
+    margin: 30px 0;
+}
+
+.elisabeth-content h3 {
+    font-family: serif;
+    font-size: 25px;
+}
+
+.elisabeth-content p {
+    line-height: 1.9;
+}
+
+.elisabeth-content blockquote {
+    margin: 35px 0;
+    padding-left: 20px;
+
+    border-left: 2px solid #B58BD9;
+
+    color: #D8B9F0;
+    font-family: serif;
+    font-size: 28px;
+    font-style: italic;
+}
+
+.elisabeth-content a {
+    display: inline-block;
+    margin-top: 15px;
+
+    color: #D8B9F0;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #B58BD9;
+    padding-bottom: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .emperor-section {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+        gap: 35px;
+    }
+
+    .elisabeth-section {
+        padding: 90px 7%;
+        min-height: 600px;
+    }
+
+}
+
+h1{font-family: "Cinzel";}
